@@ -8,7 +8,7 @@ class Graph:
             [0, 1, 0, 1, 0, 0, 1],
             [0, 0, 0, 1, 0, 0, 1],
             [1, 0, 0, 1, 1, 1, 1],
-            [1, 1, 1, 1, 0, 1, 0],
+            [1, 1, 1, 1, 0, 1, 0]
         ]
         self.visited = [[0 for _ in range(self.maxCol)] for _ in range(self.maxCol)]
 
