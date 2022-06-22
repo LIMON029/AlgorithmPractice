@@ -1,15 +1,11 @@
 from sys import stdin, stdout
 
-
-def getResult(n):
-    if n == 1:
-        return 1
-    if n == 2:
-        return 2
-    return getResult(n-1) + getResult(n - 2)
-
-
 N = int(stdin.readline())
 
-
-stdout.write(f"{getResult(N) % 10007}")
+DP = [1, 2]
+if N >= 3:
+    for i in range(2, N):
+        DP.append(DP[i-1] + DP[i-2])
+    stdout.write(f"{DP[-1] % 10007}")
+else:
+    stdout.write(f"{N}")
